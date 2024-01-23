@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    
+    <title>Metagentics</title>
+</head>
+
+<body>
+    <div id="container">
+        <video id="background_video" loop muted></video>
+        <div id="video_cover"></div>
+        <div id="overlay"></div>
+
+        <section id="main_content" style="">
+
+            <div class="row">
+                <div class="logo animate__animated animate__bounceInDown">
+                    <img src="img/logo-white.png" alt="logo">
+                </div>
+                <div class="a">
+                    <h3 class="animate__animated animate__fadeInUp">Welcome to the metagenetics dashboard</h3>
+                    <p class="animate__animated animate__fadeInUp">Enter your username and password to access the system</p>
+                    <div class="from mb-3">
+                        <div class="input-group mb-3 animate__animated animate__fadeInDown">
+                            <label class="input-group-text animate__animated animate__fadeInRight" for="username"><i class="bi bi-person"></i></label>
+                            <input type="text" id="username" class="form-control form-control-sm" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3 animate__animated animate__fadeInDown">
+                            <label class="input-group-text animate__animated animate__fadeInRight" for="password"><i class="bi bi-lock"></i></label>
+                            <input type="password" id="password" class="form-control form-control-sm" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                            <button class="btn btn-dark me-md-2 animate__animated animate__fadeInUp">
+                                <i class="bi bi-question-circle"></i>
+                            </button>
+                            <button class="btn btn-dark animate__animated animate__fadeInUp">
+                                Sign in
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="js/bideo.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/tooltip.js"></script>
+</body>
+
+</html>

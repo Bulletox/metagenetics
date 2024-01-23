@@ -1,0 +1,11 @@
+@import url('../fonts/HelveticaNowDisplay-Bold.ttf');
+@import url('../fonts/HelveticaNowDisplay-Regular.ttf');
+
+#my-box{padding: 20px;
+    background: linear-gradient(to bottom, rgba(91,110,119,1) 0%,rgba(47,66,73,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    -webkit-box-shadow: 0px 0px 28px 0px rgba(110,110,110,0.31);
+    -moz-box-shadow: 0px 0px 28px 0px rgba(110,110,110,0.31);
+    box-shadow: 0px 0px 28px 0px rgba(110,110,110,0.31);}
+h1{font-family: 'HelveticaNowDisplay-Bold', sans-serif;
+
+}
