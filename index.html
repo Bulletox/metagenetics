@@ -21,7 +21,46 @@
         <div id="video_cover"></div>
         <div id="overlay"></div>
     </div>
+    <div class="fondo-semi-transparente" id="toastContainer" style="display:none;"></div>
+    
+    <div class="toast attempt position-fixed top-50 start-50 translate-middle" role="alert" aria-live="assertive" aria-atomic="true" id="unlockToast">
+        <div class="toast-header">
+            <i class="bi bi-exclamation-circle"></i>
+            <strong class="me-auto">ㅤAlert</strong>
+            <small class="text-body-secondary">1 min agoㅤ</small>
+            <i class="bi bi-x-circle" id="closebutton" onclick="closeToast()"></i>
+        </div>
+        <div class="toast-body" id="toast-body">
+    
+        </div>
+    </div>
+    
+    <!-- Toast System Blocked -->
+    <div class="toast sytemblocked top-0 end-0" role="alert" aria-live="assertive" aria-atomic="true" id="unlockToast_systemlocked" style="position: fixed;">
+        <div class="toast-header">
+            <i class="bi bi-ban"></i>
+            <strong class="me-auto">ㅤYour system is locked!</strong>
+            <small class="text-body-secondary">1 mins agoㅤ</small>
+            <i class="bi bi-x-circle" id="closebutton" onclick="closeToast()"></i>
+        </div>
+        <div class="toast-body" id="toast-body_systemlocked">
+    
+        </div>
+    </div>
     <section id="main_content">
+
+        <!-- Toast Administration Unlock -->
+        <!-- <div class="toast attempt top-0 start-50 translate-middle-x" role="alert" aria-live="assertive" aria-atomic="true" id="unlockToast_administrator" style="display: block; position: fixed">
+            <div class="toast-header" id="header_administrator">
+                <i class="bi bi-exclamation-circle"></i>
+                <strong class="me-auto">ㅤAlert</strong>
+                <small class="text-body-secondary">1 min agoㅤ</small>
+                <i class="bi bi-x-circle" id="closebutton" onclick="closeToast()"></i>
+            </div>
+            <div class="toast-body" id="toast-body">
+    
+            </div>
+        </div> -->
 
         <div class="row">
             <div class="logo animate__animated animate__bounceInDown logo">
@@ -45,37 +84,26 @@
                         <input type="password" id="password" class="form-control form-control-sm" placeholder="Password"
                             aria-label="Password" aria-describedby="basic-addon1">
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-between">
-                        <button class="btn btn-dark me-md-2 animate__animated animate__fadeInUp" onclick="mostrarEmergente()">
-                            <i class="bi bi-question-circle"></i>
+
+                    <div class="box-buttons  animate__animated animate__fadeInUp">
+                        <button type="button" class="btn btn-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-question-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path>
+                                <path
+                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94">
+                                </path>
+                            </svg>
                         </button>
-                        
-                        <button class="btn btn-dark animate__animated animate__fadeInUp" onclick="comprobar()">
-                            Sign in
-                         </button>
-                         
+                        <button type="button" class="btn btn-danger animate__animated animate__flash animate__infinite infinite float-start" onclick="" id="btn-danger" style="display: none;"><i class="bi bi-lock-fill"></i>Unlock system</button>
+
+
+                        <button type="button" class="btn btn-dark" onclick="unlockToastAlert()">Enter</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="ventanaemergente animate__animated animate__backInDown">
-            <div class="zonaRoja">
-                <div class="zonaIZ">
-                    <img src="img/exclamacion.png" height="20" width="20">
-                    <p>alert</p>
-                </div>
-                <i class="bi bi-x-circle-fill de" onclick="cerrarEmergente()"></i>
-            </div>
-            <div class="zonaNegra">
-                <p class="ar">Incorrect username or password</p>
-                <p class="intentos">left 1 attempts</p>
-            </div>
-        </div>
-        <div class="alaverga" onclick="cerrarEmergente()"></div>
-
-        <div class="ventanaemergente2">
-
-        </div>
+        
     </section>
 
     <script src="js/toast.js"></script>
